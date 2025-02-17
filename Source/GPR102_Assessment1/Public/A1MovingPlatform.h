@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "Components/InterpToMovementComponent.h"
 #include "A1MovingPlatform.generated.h"
 
 UCLASS()
@@ -15,12 +16,22 @@ public:
 	// Sets default values for this actor's properties
 	AA1MovingPlatform();
 
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="variables");  //I tried to create a variable of type vector here in C++ and then pass it to blueprint, but I couldn't figure out how to do that
+	//FVector TargetPos;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "scene");
+	TObjectPtr<USceneComponent>DefaultSceneComponent;
 	
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category="mesh"); //setting up meta specifiers
-	TObjectPtr<UStaticMeshComponent> MeshComp;  //adding component
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category="mesh");
+	TObjectPtr<UStaticMeshComponent> MeshComp; 
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category="movement");
+	TObjectPtr<UInterpToMovementComponent> MovementComp;
+
 
 public:	
 	// Called every frame
