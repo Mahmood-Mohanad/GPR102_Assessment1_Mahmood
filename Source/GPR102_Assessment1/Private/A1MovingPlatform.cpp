@@ -5,25 +5,27 @@
 #include "GameFramework/MovementComponent.h"
 #include "Components/InterpToMovementComponent.h"
 
+
 // Sets default values
 AA1MovingPlatform::AA1MovingPlatform()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	DefaultSceneComponent = CreateDefaultSubobject<USceneComponent>(TEXT("DefaultSceneComponent"));
-	RootComponent = DefaultSceneComponent;
-	
-	MeshComp= CreateDefaultSubobject<UStaticMeshComponent>(TEXT("cpp_mesh"));
-	MeshComp->SetupAttachment(DefaultSceneComponent);
 
-	MovementComp= CreateDefaultSubobject<UInterpToMovementComponent>(TEXT("cpp_movement"));
-	MovementComp->SetUpdatedComponent(DefaultSceneComponent);
+	// Create and set up the default scene root
+	SceneComponent = CreateDefaultSubobject<USceneComponent>(TEXT("cpp_SceneRoot"));
+	RootComponent = SceneComponent;
 
-	/* I've tried to inherit this class in BP_MovingPlatform, but I keep messing up the component
-	hierarchy and it always behaves in an unexpected way. I simply give up and assign a generic
-	actor as the parent of BP_MovingPlatform -Mahmood */
+	// Create the static mesh component
+	MeshComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("cpp_StaticMesh"));
+	MeshComp->SetupAttachment(SceneComponent);
+
+	// Create the movement component
+	MovementComp = CreateDefaultSubobject<UInterpToMovementComponent>(TEXT("cpp_InterpToMovement"));
+	MovementComp->SetUpdatedComponent(SceneComponent);
 }
+
 
 // Called when the game starts or when spawned
 void AA1MovingPlatform::BeginPlay()

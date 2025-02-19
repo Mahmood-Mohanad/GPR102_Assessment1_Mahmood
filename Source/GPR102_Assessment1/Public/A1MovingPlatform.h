@@ -16,20 +16,22 @@ public:
 	// Sets default values for this actor's properties
 	AA1MovingPlatform();
 
-	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="variables");  //I tried to create a variable of type vector here in C++ and then pass it to blueprint, but I couldn't figure out how to do that
-	//FVector TargetPos;
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Variables", meta = (MakeEditWidget = "true"))
+	FVector TargetPos;
+
+
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "scene");
-	TObjectPtr<USceneComponent>DefaultSceneComponent;
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "scene")
+	TObjectPtr<USceneComponent>SceneComponent;
 	
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category="mesh");
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category="mesh")
 	TObjectPtr<UStaticMeshComponent> MeshComp; 
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category="movement");
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category="movement")
 	TObjectPtr<UInterpToMovementComponent> MovementComp;
 
 
