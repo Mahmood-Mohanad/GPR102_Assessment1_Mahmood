@@ -17,11 +17,15 @@ AA1AutoDoor::AA1AutoDoor()
     DoorWall = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("cpp_DoorWall"));
     DoorWall->SetupAttachment(SceneComponent);
 
-    // Create the DoorLeafR and attach it to the aabbox.
+    // Create the DoorLeafR and attach it to the SceneComponent.
     DoorLeafR = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("cpp_DoorLeafR"));
     DoorLeafR->SetupAttachment(SceneComponent);
 
-    // Create the aabbox and attach it to the DoorLeafR.
+    // Create the DoorLeafL and attach it to the SceneComponent.
+    DoorLeafL = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("cpp_DoorLeafL"));
+    DoorLeafL->SetupAttachment(SceneComponent);
+
+    // Create the aabbox and attach it to the SceneComponent.
     aabbox = CreateDefaultSubobject<UBoxComponent>(TEXT("cpp_AABB"));
     aabbox->SetupAttachment(SceneComponent);
 

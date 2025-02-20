@@ -17,7 +17,7 @@ public:
 	AA1MovingPlatform();
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Variables", meta = (MakeEditWidget = "true"))
-	FVector TargetPos;
+	FVector TargetPos;  // This variable represents the mini 3D gizmo that I can edit in the editor viewport (the target location for the platform to move to)
 
 
 

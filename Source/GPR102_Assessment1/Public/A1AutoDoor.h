@@ -22,9 +22,6 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "box")
-	TObjectPtr<UBoxComponent> aabbox;
-
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "scene")
 	TObjectPtr<USceneComponent> SceneComponent;
 
@@ -33,6 +30,12 @@ protected:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "mesh")
 	TObjectPtr<UStaticMeshComponent> DoorLeafR;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "mesh")
+	TObjectPtr<UStaticMeshComponent> DoorLeafL;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "box")
+	TObjectPtr<UBoxComponent> aabbox;
 
 public:	
 	// Called every frame
