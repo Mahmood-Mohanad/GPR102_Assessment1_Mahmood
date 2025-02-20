@@ -3,6 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Components/SceneComponent.h"
+#include "Components/StaticMeshComponent.h"
 #include "GameFramework/Actor.h"
 #include "Components/BoxComponent.h"
 #include "A1AutoDoor.generated.h"
@@ -20,7 +22,7 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "scene")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "box")
 	TObjectPtr<UBoxComponent> aabbox;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "scene")

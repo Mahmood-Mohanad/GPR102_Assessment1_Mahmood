@@ -3,6 +3,8 @@
 
 #include "A1MovingPlatform.h"
 #include "GameFramework/MovementComponent.h"
+#include "Components/SceneComponent.h"
+#include "Components/StaticMeshComponent.h"
 #include "Components/InterpToMovementComponent.h"
 
 

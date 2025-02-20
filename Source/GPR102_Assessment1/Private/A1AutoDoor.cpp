@@ -23,7 +23,7 @@ AA1AutoDoor::AA1AutoDoor()
 
     // Create the aabbox and attach it to the DoorLeafR.
     aabbox = CreateDefaultSubobject<UBoxComponent>(TEXT("cpp_AABB"));
-    aabbox->SetupAttachment(DoorLeafR);
+    aabbox->SetupAttachment(SceneComponent);
 
 }
 
