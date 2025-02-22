@@ -1,0 +1,151 @@
+This text file is auto-generated using Git Bash on Windows. I used the following command:
+git log --pretty=format:"(%h)%n(%an)%n(%ad)%n%n[%s]%n%b%n---------------------%n%n" > commit_history.txt
+
+
+
+
+
+(d0172e9)
+(Mahmood-Mohanad)
+(Sat Feb 22 12:32:26 2025 +0300)
+
+[- Final Commit befor submission]
+- added timed disappearing platform (C++ and Blueprint)
+
+- added character swapping mechanic (game mode and controller)
+
+- refined the level
+
+- double-checked everything befor submission
+
+---------------------
+
+
+(9686288)
+(Mahmood-Mohanad)
+(Fri Feb 21 04:24:26 2025 +0300)
+
+[Adding pressure switches to the door]
+- Creating a mini puzzle for door activation
+
+- eating multiple pressure switches
+
+- Expanding the level
+
+- arning how to use the sequencer
+
+---------------------
+
+
+(ca1642e)
+(Mahmood-Mohanad)
+(Thu Feb 20 18:52:48 2025 +0300)
+
+[Creating launch pad]
+Creating C++ and Blueprint classes for a bottom-activated launch pad
+
+Adjusting the level (adding more playable area)
+
+Adjusting C++ automatic door class code
+
+---------------------
+
+
+(6a97208)
+(Mahmood-Mohanad)
+(Thu Feb 20 04:18:06 2025 +0300)
+
+[Fixing bugs]
+- Fixing a build error due to the wrong include location
+
+- Updating the automatic door leaf sliding motion
+
+Tidying things up a little
+
+---------------------
+
+
+(a316d19)
+(Mahmood-Mohanad)
+(Thu Feb 20 01:44:25 2025 +0300)
+
+[Preparing the logic for doors]
+- Creating C++ and Blueprint classes for auto doors
+- Experimenting with new platform logic
+- Building additional elements in the level
+
+---------------------
+
+
+(f77f5c8)
+(Mahmood-Mohanad)
+(Mon Feb 17 03:44:16 2025 +0300)
+
+[Created the moving platform logic in both Blueprint and C++]
+ Learned how to add multi-line comments for my commit messages using Git Bash and the -m flag
+
+Learned how to use git log and generate a TXT file report for all the commits
+
+---------------------
+
+
+(29edc7f)
+(Mahmood-Mohanad)
+(Sun Feb 16 01:47:36 2025 +0300)
+
+[Setting up the game environment]
+Setting up Rider (code editor)
+
+Creating a new C++ class (A1MovingPlatform)
+
+Creating a new Blueprint class (BP_MovingPlatform)
+
+And finally, learning how to add a multi-line commit (comment) using Git Bash
+
+---------------------
+
+
+(4284bee)
+(Mahmood-Mohanad)
+(Sat Feb 15 23:20:23 2025 +0300)
+
+[This is my first push to my GitHub account using Git Bash on Windows]
+
+---------------------
+
+
+(749244a)
+(Will Masek)
+(Fri Jan 31 15:48:13 2025 +0000)
+
+[Creating VS project, replacing original game mode with GM_Assessment and associated cpp class.]
+
+---------------------
+
+
+(2b133c9)
+(Will Masek)
+(Fri Jan 31 15:16:05 2025 +0000)
+
+[removing some existing blueprints.]
+
+---------------------
+
+
+(11d2930)
+(Will Masek)
+(Fri Jan 31 15:13:20 2025 +0000)
+
+[Initial project commit.]
+
+---------------------
+
+
+(3b85386)
+(Will Masek)
+(Fri Jan 31 15:12:02 2025 +0000)
+
+[Initial commit]
+
+---------------------
+
